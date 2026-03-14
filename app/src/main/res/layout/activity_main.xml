@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 録音ステータス -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="準備中"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/recordTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <com.yamanobora.offlinerecorder.WaveformView
+        android:id="@+id/waveformView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"/>
+
+    <!-- 録音開始／停止ボタン -->
+    <Button
+        android:id="@+id/recordButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="録音開始"
+        android:padding="12dp"/>
+
+    <Switch
+        android:id="@+id/aiModeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI要約を使う"
+        android:checked="false"
+        android:layout_marginTop="12dp"/>
+
+
+    <!-- 議事録一覧ボタン -->
+    <Button
+        android:id="@+id/listButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="議事録一覧を開く"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"/>
+
+
+    <!-- 音声文字起こし表示 -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EEEEEE"
+        android:padding="8dp"
+        android:text="文字起こし結果"
+        android:textSize="14sp"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"/>
+
+    <!-- 要約表示 -->
+    <TextView
+        android:id="@+id/summaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDFFDD"
+        android:padding="8dp"
+        android:text="要約結果"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
